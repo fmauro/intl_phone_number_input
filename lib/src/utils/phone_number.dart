@@ -4,23 +4,7 @@ import 'dart:math';
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:equatable/equatable.dart';
 import 'package:intl_phone_number_input/src/models/country_list.dart';
-import 'package:intl_phone_number_input/src/utils/phone_number/phone_number_util.dart';
-
-/// Type of phone numbers.
-enum PhoneNumberType {
-  FIXED_LINE, // : 0,
-  MOBILE, //: 1,
-  FIXED_LINE_OR_MOBILE, //: 2,
-  TOLL_FREE, //: 3,
-  PREMIUM_RATE, //: 4,
-  SHARED_COST, //: 5,
-  VOIP, //: 6,
-  PERSONAL_NUMBER, //: 7,
-  PAGER, //: 8,
-  UAN, //: 9,
-  VOICEMAIL, //: 10,
-  UNKNOWN, //: -1
-}
+import 'package:libphonenumber/libphonenumber.dart';
 
 /// [PhoneNumber] contains detailed information about a phone number
 class PhoneNumber extends Equatable {
